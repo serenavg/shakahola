@@ -1,0 +1,284 @@
+@charset "utf-8";
+
+/* Simplify width and height calculations */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+#wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #5594d2;
+    font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.5em;
+    background-color: #b40202;
+}
+
+main {
+    width: 100%;
+    margin-left: 20%;
+    background-color: rgba(18, 16, 16, 0.8);
+    color: rgb(6, 163, 30);
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+main h3 {
+    margin-top: 2%;
+    margin-bottom: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 2.5em;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: rgb(1, 10, 4);
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    font-style: normal;
+}
+
+
+
+
+h1,
+h2,
+h3 {
+    color: #b40202;
+    font-style: normal;
+    font-weight: 100;
+}
+
+h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 3.5em;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: rgb(1, 10, 4);
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    font-style: normal;
+
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    margin-right: 10%;
+    font-size: 2.25em;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a:link {
+    color: rgb(244, 231, 231);
+}
+
+a:visited {
+    color: rgb(240, 11, 11);
+}
+
+a:hover,
+a:active,
+a:focus,
+a:thispage {
+    color: #5CD56A;
+    text-decoration: underline;
+    margin: 500px;
+
+}
+
+#menulink {
+    margin: 30px;
+    text-align: center;
+    background-color: #b40202;
+    color: rgba(55, 25, 25, 1.00);
+}
+
+#menulink a {
+    color: rgb(11, 8, 8);
+    font-weight: 200;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+}
+
+#menulink a:hover {
+    color: rgb(244, 231, 231);
+}
+
+nav {
+    float: none;
+    display: block;
+}
+
+#navlinks {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    list-style-type: none;
+    transition: all ease-out 1s;
+}
+
+
+
+
+#navlinks a {
+    flex: 1 0 auto;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+#navlinks a:hover,
+#navlinks a:active,
+#navlinks a:focus,
+#navlinks a.thispage {
+    color: rgb(21, 157, 37);
+}
+
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero video {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: black;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.grayscale {
+    filter: grayscale(100%);
+}
+
+.grayscale:hover {
+    filter: grayscale(0%);
+}
+
+
+footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #1e1e1e;
+    color: white;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+
+
+@media (min-width:500px) {
+    #menulink {
+        display: none;
+    }
+
+    #navlinks {
+        max-width: 100%;
+        background-color: transparent;
+        position: static;
+    }
+
+    #navlinks.collapsed {
+        opacity: 1;
+    }
+
+    #navlinks a {
+        width: 20%;
+        margin-bottom: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        float: left;
+    }
+
+    header {
+        overflow: hidden;
+    }
+
+    #hero p {
+        width: 30%;
+        padding-top: 20px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 0px;
+        position: absolute;
+        top: -9px;
+        border-radius: 9px;
+        right: 4px;
+        border-width: 5px;
+        border-style: solid;
+        background-color: rgba(0, 0, 0, 0.68);
+    }
+
+    #hero {
+        position: relative;
+    }
+
+    main {
+        width: 60%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        float: left;
+        font-size: 0.875em;
+    }
+
+    footer {
+        clear: left;
+    }
+
+
+}
+
+@media (min-width:900px) {
+    .floatright {
+        margin-right: auto;
+        margin-left: 10px;
+        float: right;
+    }
+
+    .floatleft {
+        margin-right: 10px;
+        margin-left: auto;
+    }
+}
